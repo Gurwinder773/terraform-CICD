@@ -8,6 +8,7 @@ terraform {
   }
 }
 
+
 provider "azurerm" {
   features {}
   subscription_id = "7c4d33cc-5fa6-47d0-9aaa-505138f64d92"
@@ -15,6 +16,14 @@ provider "azurerm" {
   client_secret   = "vXZ8Q~8X6qdoieoTovCjuU_g6-2dPyKgRvjeCcHf"
   tenant_id       = "3eff799d-0a57-4672-b97f-3690098ef323"
 }
+
+
+  backend "azurerm" {
+    resource_group_name   = "rg1"
+    storage_account_name  = "terraform12"
+    container_name        = "mystorec"
+    key                   = "terraform.tfstate"
+  }
 
  resource "azurerm_resource_group" "azurerm" {
   name     = "Terraform"
