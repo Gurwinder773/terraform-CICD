@@ -20,14 +20,14 @@ provider "azurerm" {
 
   backend "azurerm" {
     resource_group_name   = "rg1"
-    storage_account_name  = "terraform12"
+    storage_account_name  = "jenkinca"
     container_name        = "mystorec"
     key                   = "terraform.tfstate"
   }
 
  resource "azurerm_resource_group" "azurerm" {
-  name     = "Terraform"
-  location = "east US"
+  name     = "rg1"
+  location = "Canada Central"
 }
 resource "azurerm_virtual_network" "vnet" {
   name                = "terraformNetwork"
