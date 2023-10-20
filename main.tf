@@ -18,12 +18,6 @@ provider "azurerm" {
 }
 
 
-  backend "azurerm" {
-    resource_group_name   = "rg1"
-    storage_account_name  = "jenkinca"
-    container_name        = "mystorec"
-    key                   = "terraform.tfstate"
-  }
 
  resource "azurerm_resource_group" "azurerm" {
   name     = "rg1"
@@ -110,9 +104,9 @@ resource "azurerm_virtual_machine" "main" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password12345"
+    computer_name  = "ubuntuvm"
+    admin_username = "adminuser"
+    admin_password = "Mar3110@ptl773"
   }
   os_profile_linux_config {
     disable_password_authentication = false
