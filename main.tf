@@ -104,9 +104,9 @@ resource "azurerm_virtual_machine" "main" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = "jenkinvm"
-    admin_username = "adminuser"
-    admin_password = "Mar3110@ptl773"
+    computer_name  = "hostname"
+    admin_username = "testadmin"
+    admin_password = "Password12345"
   }
   os_profile_linux_config {
     disable_password_authentication = false
