@@ -13,7 +13,7 @@ provider "azurerm" {
   features {}
   subscription_id = "7c4d33cc-5fa6-47d0-9aaa-505138f64d92"
   client_id       = "58ee68b7-b696-4aa1-b586-2f0af1f5098e"
-  client_secret   = "vXZ8Q~8X6qdoieoTovCjuU_g6-2dPyKgRvjeCcHf"
+  client_secret   = "jnZ8Q~C2NmMp5OASmOLyvRFn54wK3Gn0efy3nbHk"
   tenant_id       = "3eff799d-0a57-4672-b97f-3690098ef323"
 }
 
@@ -21,7 +21,7 @@ provider "azurerm" {
 
  resource "azurerm_resource_group" "azurerm" {
   name     = "rg1"
-  location = "Canada Central"
+  location = "Canada East"
 }
 resource "azurerm_virtual_network" "vnet" {
   name                = "terraformNetwork"
@@ -104,7 +104,7 @@ resource "azurerm_virtual_machine" "main" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = "ubuntuvm"
+    computer_name  = "jenkinvm"
     admin_username = "adminuser"
     admin_password = "Mar3110@ptl773"
   }
